@@ -6,7 +6,6 @@ export function guardarEnLocalStorage(key, datos) {
 export function obtenerDelLocalStorage(key) {
   const datos = localStorage.getItem(key);
   return datos ? JSON.parse(datos) : [];
-  // return JSON.parse(datos) || []
 }
 
 export function guardarEnSessionStorage(key, datos) {
