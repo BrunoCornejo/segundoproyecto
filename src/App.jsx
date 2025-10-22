@@ -1,6 +1,8 @@
-import Header from "./components/Header";
+import AdminPanel from "./components/AdminPanel";
+
+
 export default function App() {
   return (
-   <Header></Header>
+   <AdminPanel></AdminPanel>
   );
 }
