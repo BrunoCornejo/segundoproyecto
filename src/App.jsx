@@ -1,6 +1,12 @@
-import Header from "./components/Header";
-export default function App() {
+import FormLogin from './components/auth/FormLogin.jsx';
+import LoginPage from './pages/LoginPage.jsx';
+
+function App() {
   return (
-   <Header></Header>
+    <div className="App">
+      <LoginPage /> 
+    </div>
   );
 }
+
+export default App;
