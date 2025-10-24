@@ -1,0 +1,22 @@
+.img-Error {
+    width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.error{
+    background-color: #003366 ;
+}
+
+.botonError {
+    background-color: #FFFFFF !important;
+    color: #003366 !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+}
+
+.botonError:hover {
+    background-color: #e6e6e6 !important;
+    color: #003366 !important;
+}
