@@ -1,0 +1,20 @@
+.Carrusel-padre {
+  /* border: 2px solid black; */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.67);;
+  width: 90%;
+  height: 450px;
+  margin: auto;
+  margin-top: 30px;
+}
+.carrusel-hijo {
+  height: 450px;
+}
+.img-carrusel {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  object-fit: scale-down;
+}
+.carousel-indicators{
+  display: none !important;
+}
