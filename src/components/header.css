@@ -1,0 +1,30 @@
+.img-logo {
+  width: 100px;
+  height: 90px;
+}
+.cont-padre {
+  background-color: #336699;
+  height: 70px;
+  font-size: 14px;
+}
+.cont-button {
+  display: flex;
+  gap: 10px;
+}
+.dropdown-toggle.nav-link{
+  color: white !important;
+  &:hover{
+    color: white !important;
+  }
+}
+.nav-item{
+  font-size: 14px;
+}
+.boton-nav{
+  background-color: #003366!important;
+  font-size: 14px !important;
+  &:hover{
+    background-color: white !important;
+    color: #336699 !important;
+  }
+}

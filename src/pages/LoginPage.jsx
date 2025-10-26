@@ -7,7 +7,7 @@ const LoginPage = () => {
   return (
     <div
       className="d-flex align-items-center"
-      style={{ minHeight: "100vh", backgroundColor: "#FFFFFF" }} 
+      style={{ minHeight: "100vh", backgroundColor: "#003366" }} 
     >
       <Container>
         <Row className="justify-content-center">
