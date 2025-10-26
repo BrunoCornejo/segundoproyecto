@@ -1,3 +1,4 @@
+import AdminPanel from "./components/AdminPanel";
 import FormLogin from './components/auth/FormLogin.jsx';
 import Portada from './home/Portada.jsx';
 import LoginPage from './pages/LoginPage.jsx';
