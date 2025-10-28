@@ -1,18 +1,21 @@
 import React from "react";
 import "./AcercaDeNosotros.css";
 import { FiClock, FiSend, FiAward, FiCheckCircle, FiEye } from "react-icons/fi";
+import Button from "react-bootstrap/Button";
+
+import Card from "react-bootstrap/Card";
+
 export default function AcercaDeNosotros() {
   return (
     <div className="container">
       <section>
         <h1>ACERCA DE NOSOTROS</h1>
-        <h2>
-          {" "}
-          <FiClock style={{ marginRight: "8px" }} />
+        <h2 className="titulo">
+          <FiClock style={{ color: "#124681ff", marginRight: "8px" }} />
           NUESTRA HISTORIA
         </h2>
         <p>
-          Fundada en 2010, nuestra tienda ha crecido desde un pequeño local
+          Fundada en 2025, nuestra tienda ha crecido desde un pequeño local
           hasta convertirse en un referente en el mercado de la electrónica,
           siempre con el compromiso de ofrecer la mejor tecnología a nuestros
           clientes.
@@ -55,7 +58,7 @@ export default function AcercaDeNosotros() {
       </section>
       <section>
         <h2>
-          <FiEye style={{ marginRight: "5px" }} />
+          <FiEye style={{ marginRight: "6px" }} />
           VISIÓN A FUTURO
         </h2>
         <p>
@@ -64,6 +67,61 @@ export default function AcercaDeNosotros() {
           nuestro compromiso de innovación y servicio al cliente para las
           generaciones venideras.
         </p>
+      </section>
+      <section>
+        <h1>EQUIPO TECNOVOLT</h1>
+        <div className="containerCards">
+          <div className="CardEquipo">
+            <Card style={{ width: "18rem" }}>
+              <Card.Body>
+                <Card.Title>JULIETA SANTILLAN</Card.Title>
+                <Card.Text>
+                  Profesora de Matemática y parte del equipo administrativo de
+                  Tecno Volt. Se encarga de la organización y gestión interna,
+                  aplicando la lógica y precisión de su formación para optimizar
+                  los procesos y contribuir al desarrollo eficiente e innovador
+                  de la empresa.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="cardEquipo">
+            <Card style={{ width: "18rem" }}>
+              <Card.Body>
+                <Card.Title>FACUNDO DIAZ</Card.Title>
+                <Card.Text>
+                  21 años y formo parte del proyecto TecnoVolt. Soy estudiante
+                  de programación y me apasiona el desarrollo web, especialmente
+                  el área frontend, en la cual busco perfeccionarme y seguir
+                  creciendo profesionalmente.
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="cardEquipo">
+            <Card style={{ width: "18rem" }}>
+              <Card.Body>
+                <Card.Title>BRUNO CORNEJO</Card.Title>
+                <Card.Text>
+                  26 años Recibido en tecnicatura en programación 2025 en UTN
+                  tengo y me encuentro perfeccionandome más en mi rubro
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+          <div className="cardEquipo ">
+            <Card style={{ width: "18rem" }}>
+              <Card.Body className="Card">
+                <Card.Title>YOSELIN AGUERO</Card.Title>
+                <Card.Text>
+                  18 años,estudiante de programación y formo parte del proyecto
+                  TecnoVolt,donde continúo perfeccionando mis conocimientos y
+                  habilidades en el área
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+        </div>
       </section>
     </div>
   );
