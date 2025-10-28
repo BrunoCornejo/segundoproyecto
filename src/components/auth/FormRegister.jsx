@@ -1,9 +1,8 @@
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { Form, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
-
-export default function FormLogin() {
+export default function FormRegister() {
   const {
     register,
     handleSubmit,
@@ -17,50 +16,50 @@ export default function FormLogin() {
     },
   });
 
-//const navegacion = useNavigate();
+  const navegacion = useNavigate();
 
+  //Se guarda el usuario en el LocalStorage. USUARIOS=[]
   function obtenerDelLocalStorage() {
     const usuariosDelLocalStorage =
       JSON.parse(localStorage.getItem("usuarios")) || [];
     return usuariosDelLocalStorage;
   }
 
-  function onSubmit(data) {
-    console.log(data);
-    
-    const usuariosDelLocalStorage = obtenerDelLocalStorage();
-    console.log(usuariosDelLocalStorage);
-
-    //Verifico que el usuario exista 
-    const usuarioExistente = usuariosDelLocalStorage.find((usuario) => {
-      return usuario.email === data.email;
-    });
-    console.log(usuarioExistente);
-
-    //Reviso que la contraseña sea correccta
-    if (!usuarioExistente) {
-      alert("Los datos ingresados son incorrectos");
-      return;
-    }
-
-    if (usuarioExistente.password !== data.password) {
-      alert("Los datos ingresados son incorrectos");
-      return;
-    }
-    
-    guardarEnSessionStorage("usuario", usuarioExistente);
-    alert("Has iniciado sesión correctamente");
-    reset();
-    navegacion("/");
+  function guardarEnLocalStorage(nuevoListado) {
+    localStorage.setItem("usuarios", JSON.stringify(nuevoListado));
   }
+  function onSubmit(data) {
+    try {
+      const nuevoUsuario = {
+        id: Date.now(),
+        email: data.email,
+        password: data.password,
+        createdAt: new Date().toISOString(),
+      };
+      console.log(nuevoUsuario);
 
+      
+      const listadoUsuariosLS = obtenerDelLocalStorage();
+      guardarEnLocalStorage([...listadoUsuariosLS, nuevoUsuario]);
+      
+      alert("Usuario registrado con éxito");
+      reset();
+
+      //Redireccionar al Login
+      navegacion("/");
+    } catch (error) {
+      console.log(error);
+      alert("No se pudo registrar el usuario");
+    }
+  }
+  console.log(errors);
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email</Form.Label>
         <Form.Control
           type="email"
-          placeholder="Ingrese su email"
+          placeholder="ejemplo@email.com"
           isInvalid={errors.email}
           //   isValid={!errors.email}
           {...register("email", {
@@ -89,19 +88,19 @@ export default function FormLogin() {
           {...register("password", {
             required: "El campo es obligatorio",
             minLength: {
-              value: 5,
-              message: "Debe ingresar al menos 5 caracteres",
+              value: 4,
+              message: "Debe ingresar al menos 4 caracteres",
             },
           })}
         />
         <Form.Control.Feedback type="invalid">
-          {errors?.password?.message}
-        </Form.Control.Feedback>
+          {errors.password?.message}
+        </Form.Control.Feedback>{" "}
       </Form.Group>
+      
       <Button variant="primary" type="submit">
-        Iniciar Sesión
+        Registrarse
       </Button>
     </Form>
   );
 }
-
