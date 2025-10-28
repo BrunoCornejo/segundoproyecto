@@ -8,8 +8,6 @@ import FavoritosPage from "../pages/FavoritosPage.jsx";
 import ProductosPage from "../pages/ProductosPage.jsx";
 import DetalleProductoPage from "../pages/DetalleProductoPage.jsx";
 import Error404Page from "../pages/Error404Page.jsx";
-import RegisterPage from "../pages/RegisterPage.jsx";
-
 
 export default function AppRouter() {
     return (
@@ -21,7 +19,6 @@ export default function AppRouter() {
             <Route path="/favoritos" element={<FavoritosPage />} />
             <Route path="/detalle/:tipo/:id" element={<DetalleProductoPage />} />
             <Route path="*" element={<Error404Page />} />
-            
         </Routes>
     );
 }
