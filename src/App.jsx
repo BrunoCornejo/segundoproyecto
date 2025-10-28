@@ -13,7 +13,7 @@ function App() {
       <Portada/> 
       <Categorias/>
     </>
-  );
+)
 }
 
 export default App;
