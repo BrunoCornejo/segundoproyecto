@@ -71,22 +71,20 @@ export default function AcercaDeNosotros() {
       <section>
         <h1>EQUIPO TECNOVOLT</h1>
         <div className="containerCards">
-          <div className="CardEquipo">
-            <Card style={{ width: "18rem" }}>
+          <div>
+            <Card className="cardEquipo">
               <Card.Body>
                 <Card.Title>JULIETA SANTILLAN</Card.Title>
                 <Card.Text>
                   Profesora de Matemática y parte del equipo administrativo de
                   Tecno Volt. Se encarga de la organización y gestión interna,
-                  aplicando la lógica y precisión de su formación para optimizar
-                  los procesos y contribuir al desarrollo eficiente e innovador
-                  de la empresa.
+                  aplicando logica y precision
                 </Card.Text>
               </Card.Body>
             </Card>
           </div>
-          <div className="cardEquipo">
-            <Card style={{ width: "18rem" }}>
+          <div>
+            <Card className="cardEquipo">
               <Card.Body>
                 <Card.Title>FACUNDO DIAZ</Card.Title>
                 <Card.Text>
@@ -98,8 +96,8 @@ export default function AcercaDeNosotros() {
               </Card.Body>
             </Card>
           </div>
-          <div className="cardEquipo">
-            <Card style={{ width: "18rem" }}>
+          <div>
+            <Card className="cardEquipo">
               <Card.Body>
                 <Card.Title>BRUNO CORNEJO</Card.Title>
                 <Card.Text>
@@ -109,9 +107,9 @@ export default function AcercaDeNosotros() {
               </Card.Body>
             </Card>
           </div>
-          <div className="cardEquipo ">
-            <Card style={{ width: "18rem" }}>
-              <Card.Body className="Card">
+          <div>
+            <Card className="cardEquipo">
+              <Card.Body>
                 <Card.Title>YOSELIN AGUERO</Card.Title>
                 <Card.Text>
                   18 años,estudiante de programación y formo parte del proyecto
