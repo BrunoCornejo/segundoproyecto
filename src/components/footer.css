@@ -1,5 +1,33 @@
-.cont-footer{
-    border: 2px solid black;
-   display: flex;
-   justify-content: space-around;
+.cont-footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  height: 100dv;
+  padding: 15px !important;
+}
+.cont-redes {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-redes {
+  display: flex;
+  gap: 7px;
+}
+.cont-contactos {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item-contactos {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.cont-ubicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
