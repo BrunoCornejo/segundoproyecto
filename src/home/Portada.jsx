@@ -5,14 +5,14 @@ export default function Portada() {
     <Carousel variant="dark" className="Carrusel-padre">
       <Carousel.Item interval={1000} className="carrusel-hijo">
         <img
-          src="https://philco.com.ar/media/catalog/product/cache/c8f6a96bef9e9f64cd4973587df2520f/n/1/n14p4020_7.jpg"
+          src="https://img.freepik.com/vector-gratis/tecnologia-inalambrica-dispositivos-electronicos-cartel-isometrico_1284-15286.jpg"
           alt=""
           className="img-carrusel"
         />
       </Carousel.Item>
       <Carousel.Item interval={500} className="carrusel-hijo">
         <img
-          src="https://imagenes.elpais.com/resizer/v2/KXXRBGL6VJGYPO3T4FLNSDKR4Y.jpg?auth=0af62d3f7a47c2abb05ef9cc920f3ff0df5a6c6cabe9ba6c046e5dc469a0c1c1&width=414"
+          src="https://www.thenocgroup.com/wp-content/uploads/2023/03/dispositivos_ectronicos_thenoc.jpg"
           alt=""
           className="img-carrusel"
         />
