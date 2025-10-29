@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import FormLogin from "../components/auth/FormLogin";
+import FormRegister from "../components/auth/FormRegister";
 
-const LoginPage = () => {
+const RegisterPage = () => {
   return (
     <div
       className="d-flex align-items-center"
@@ -15,27 +15,29 @@ const LoginPage = () => {
             <Card className="shadow-lg border-0 rounded-4">
               <Card.Body className="p-4 p-md-5">
                 <div className="text-center mb-4">
-                  <h1 className="mb-0" style={{ color: "#003366" }}>
-                    Iniciar Sesión
+                  <h1 className="mb-0" style={{ color: "#2e6db4" }}>
+                    Crear cuenta
                   </h1>
                   <small className="text-muted">
-                    Bienvenido de nuevo a la web TecnoVolt
+                   Únete a nuestra comunidad y descubre un mundo de tecnología
                   </small>
                 </div>
 
-                {/* Formulario */}
-                <FormLogin></FormLogin>
+                {/*Formulario de registro */}
+                <FormRegister></FormRegister>
+
+                {/*Links secundarios */}
                 <div className="mt-4 text-center">
-                  <span className="text-muted">¿Aún no tienes cuenta?</span>{" "}
+                  <span className="text-muted">¿Ya tienes una cuenta?</span>{" "}
                   <Link
-                    to="/registro"
+                    to="/login"
                     className="fw-semibold"
-                    style={{ color: "#003366" }}
+                    style={{ color: "#2e6db4" }}
                   >
-                    Regístrate
+                    Inicia sesión
                   </Link>
                   <div className="mt-2">
-                    <Link to="/" className="text-decoration-none" style={{ color: "#003366" }}>
+                    <Link to="/" className="text-decoration-none">
                       ← Volver al inicio
                     </Link>
                   </div>
@@ -49,4 +51,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

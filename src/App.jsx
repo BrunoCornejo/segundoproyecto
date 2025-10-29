@@ -1,10 +1,12 @@
-// import Header from "./components/Header";
-import AcercaDeNosotros from "./components/auth/AcercaDeNosotros";
+import AppRouter from "./routes/AppRouter.jsx";
+
 export default function App() {
   return (
-     <div>
+    <>
       <Header />
-      <AcercaDeNosotros />
-    </div>
+      <AppRouter />
+      <Footer />
+    </>
+
   );
 }
