@@ -56,12 +56,12 @@ function Header() {
 
           {/* BOTONES DERECHO */}
           <div className="cont-button d-flex gap-2">
-            <Button variant="outline-light" className="boton-nav">
+            <Link to="/login"  className="boton-nav">
               Iniciar Sesión
-            </Button>
-            <Button variant="primary" className="boton-nav">
+            </Link>
+            <Link to="/registro" className="boton-nav">
               Registrarse
-            </Button>
+            </Link>
           </div>
         </Navbar.Collapse>
       </Container>
