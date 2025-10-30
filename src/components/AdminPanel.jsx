@@ -83,7 +83,7 @@ const AdminPanel = () => {
 
       {/* Modal con formulario */}
       {showForm && (
-        <div className="modal-overlay">
+        <div className="modal-overlay bg-light">
           <div className="modal-content">
             <h2>{selectedProduct ? "Editar Producto" : "Agregar Producto"}</h2>
             <ProductForm

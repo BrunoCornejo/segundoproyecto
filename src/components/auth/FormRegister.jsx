@@ -30,29 +30,28 @@ export default function FormRegister() {
   }
   function onSubmit(data) {
     try {
+      const rol = data.email === "admin@gmail.com" ? "admin" : "user";
       const nuevoUsuario = {
         id: Date.now(),
         email: data.email,
         password: data.password,
         createdAt: new Date().toISOString(),
+        rol,
       };
-      console.log(nuevoUsuario);
 
-      
       const listadoUsuariosLS = obtenerDelLocalStorage();
       guardarEnLocalStorage([...listadoUsuariosLS, nuevoUsuario]);
-      
+
       alert("Usuario registrado con éxito");
       reset();
 
       //Redireccionar al Login
       navegacion("/");
     } catch (error) {
-      console.log(error);
       alert("No se pudo registrar el usuario");
     }
   }
-  console.log(errors);
+
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -97,7 +96,7 @@ export default function FormRegister() {
           {errors.password?.message}
         </Form.Control.Feedback>{" "}
       </Form.Group>
-      
+
       <Button variant="primary" type="submit">
         Registrarse
       </Button>

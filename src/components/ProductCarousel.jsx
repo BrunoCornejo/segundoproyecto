@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 
 export default function ProductCarousel({ productos }) {
   if (!productos.length) return null;
-   console.log(productos);
+ 
   
 
   return (

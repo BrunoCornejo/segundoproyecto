@@ -1,7 +1,8 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
-
+import { guardarEnSessionStorage } from "../../utils/localStorage";
+import { useNavigate } from "react-router-dom";
 
 export default function FormLogin() {
   const {
@@ -17,7 +18,7 @@ export default function FormLogin() {
     },
   });
 
-//const navegacion = useNavigate();
+  const navegacion = useNavigate();
 
   function obtenerDelLocalStorage() {
     const usuariosDelLocalStorage =
@@ -26,16 +27,16 @@ export default function FormLogin() {
   }
 
   function onSubmit(data) {
-    console.log(data);
-    
-    const usuariosDelLocalStorage = obtenerDelLocalStorage();
-    console.log(usuariosDelLocalStorage);
+ 
 
-    //Verifico que el usuario exista 
+    const usuariosDelLocalStorage = obtenerDelLocalStorage();
+  
+
+    //Verifico que el usuario exista
     const usuarioExistente = usuariosDelLocalStorage.find((usuario) => {
       return usuario.email === data.email;
     });
-    console.log(usuarioExistente);
+
 
     //Reviso que la contraseña sea correccta
     if (!usuarioExistente) {
@@ -47,7 +48,7 @@ export default function FormLogin() {
       alert("Los datos ingresados son incorrectos");
       return;
     }
-    
+
     guardarEnSessionStorage("usuario", usuarioExistente);
     alert("Has iniciado sesión correctamente");
     reset();
@@ -104,4 +105,3 @@ export default function FormLogin() {
     </Form>
   );
 }
-
