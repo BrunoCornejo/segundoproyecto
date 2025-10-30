@@ -22,11 +22,7 @@ function Header() {
       <Container fluid>
         {/* LOGO */}
         <Navbar.Brand as={Link} to="/">
-          <img
-            src="./src/images/tecnovolt.png"
-            alt="logo"
-            className="img-logo"
-          />
+          <img src="/tecnovolt.png" alt="logo" className="img-logo" />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="navbarScroll" />
