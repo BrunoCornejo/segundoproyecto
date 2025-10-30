@@ -6,7 +6,7 @@ import FormLogin from "../components/auth/FormLogin";
 const LoginPage = () => {
   return (
     <div
-      className="d-flex align-items-center"
+      className="d-flex align-items-center "
       style={{ minHeight: "100vh", backgroundColor: "#003366" }} 
     >
       <Container>

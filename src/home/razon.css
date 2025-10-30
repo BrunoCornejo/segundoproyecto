@@ -1,15 +1,15 @@
-.cont-acordion{
-    /* border: 2px solid black; */
-    width: 90%;
-    margin: auto;
-    background-color: white;
-
+.cont-acordion {
+  /* border: 2px solid black; */
+  width: 90%;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 10px;
 }
-.item-acordeon{
-   border: 1px solid black !important;
-   border-radius:6px 6px 0px 0px !important ;
+.item-acordeon {
+  border: 1px solid black !important;
+  border-radius: 6px 6px 0px 0px !important ;
 }
-.item-acordeon1{
-   border: 1px solid black !important;
-   border-radius:0px 0px 6px 6px !important ;
+.item-acordeon1 {
+  border: 1px solid black !important;
+  border-radius: 0px 0px 6px 6px !important ;
 }

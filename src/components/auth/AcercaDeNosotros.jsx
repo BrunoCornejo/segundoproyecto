@@ -1,13 +1,12 @@
-import React from "react";
 import "./AcercaDeNosotros.css";
 import { FiClock, FiSend, FiAward, FiCheckCircle, FiEye } from "react-icons/fi";
-import Button from "react-bootstrap/Button";
+
 
 import Card from "react-bootstrap/Card";
 
 export default function AcercaDeNosotros() {
   return (
-    <div className="container">
+    <div className="container-nosotros">
       <section>
         <h1>ACERCA DE NOSOTROS</h1>
         <h2 className="titulo">
